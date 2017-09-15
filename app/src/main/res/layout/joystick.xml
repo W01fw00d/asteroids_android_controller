@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/stars"
+    >
+
+    <RelativeLayout
+        android:id="@+id/layout_joystick"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@drawable/image_button_bg"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="43dp"
+        android:layout_marginStart="43dp">
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/layout_buttons"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/layout_joystick"
+        android:layout_toEndOf="@+id/layout_joystick">
+
+        <ImageView
+            android:id="@+id/fire_button"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/red_unpushed"
+            android:layout_marginLeft="43dp"
+            android:layout_marginStart="43dp"
+            android:layout_marginTop="43dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:id="@+id/hyper_button"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/blue_unpushed"
+            android:layout_alignTop="@+id/fire_button"
+            android:layout_alignLeft="@+id/exit_button"
+            android:layout_alignStart="@+id/exit_button" />
+
+        <ImageView
+            android:id="@+id/pause_button"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/green_unpushed"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/fire_button"
+            android:layout_alignStart="@+id/fire_button" />
+
+        <ImageView
+            android:id="@+id/exit_button"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/red_unpushed"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="49dp"
+            android:layout_marginEnd="49dp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scoreTag"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Score:"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/score"
+        android:layout_toRightOf="@+id/scoreTag"
+        android:text="0"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/livesTag"
+        android:layout_below="@+id/score"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@android:color/white"
+        android:text="Lives:" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lives"
+        android:layout_toRightOf="@+id/livesTag"
+        android:layout_below="@+id/score"
+        android:text="3"
+        android:textColor="@android:color/white" />
+
+
+</RelativeLayout>
